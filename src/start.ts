@@ -26,7 +26,6 @@ export function parse(filePath: string) {
   const all16Schemas = schemaTree.members;
   const allFixtures: Record<string, any> = {};
   all16Schemas.forEach(type => {
-    console.log(type);
     const typeName = type.name.escapedText;
     const fixture: Record<string, (typeof defaultValues)[keyof typeof defaultValues]> = {};
 
@@ -36,15 +35,31 @@ export function parse(filePath: string) {
       return;
     }
     properties.forEach(property => {
-      console.log(property);
       const propName = property.name.escapedText;
       const propType: keyof typeof defaultValues = property.type.getText().split(' | ')[0];
 
-      if (defaultValues[propType]) {
+      // bare type (string, number, boolean)
+      if (defaultValues[propType] !== undefined) {
         fixture[propName] = defaultValues[propType];
-      } else {
-        fixture[propName] = `TBD (no default value for "${propType}")`;
+        return;
       }
+
+      // some other type
+      if (propType.startsWith("components['schemas']")) {
+        fixture[propName] = `TBD type for ${propName} schema`;
+        return;
+      }
+
+      // string in quotes -- inline enumeration (use the first option)
+      const firstOfOptions = propType.match(/'(\w+)'/)?.[1];
+      if (firstOfOptions) {
+        fixture[propName] = firstOfOptions;
+        return;
+      }
+
+      const errStr = `Error: no default value for ${propType}`;
+      fixture[propName] = errStr;
+      console.error(errStr);
     });
 
     allFixtures[typeName] = fixture;
