@@ -7,5 +7,4 @@
   },
   "exclude": ["dist/**/*"],
   "extends": "@tstv/tsconfig-common/tsconfig.json"
-
 }
