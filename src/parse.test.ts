@@ -1,6 +1,6 @@
-import {describe, expect, it, test} from 'vitest';
-import {defaultValues, parse} from './start.js';
-import type {components} from '../fixtures/index.js';
+import { describe, expect, it, test } from 'vitest';
+import { defaultValues, parse } from './start.js';
+import type { components } from '../fixtures/index.js';
 
 describe('Parsing', () => {
   const fixture = parse('../fixtures/index.d.ts') as components['schemas'];
@@ -47,7 +47,15 @@ describe('Parsing', () => {
 
   describe.todo('using examples', () => {});
 
-  describe.todo('complex types', () => {});
+  describe.todo('complex types', () => {
+    test.todo('union of multiple types', () => {
+      // SubscriptionLineLifeCycle
+    });
+
+    test.todo('Join of reference type and other properties', () => {
+      // SubscriptionLineLifeCycleForever
+    });
+  });
 
   describe.todo('enums', () => {});
 });
