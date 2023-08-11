@@ -1,9 +1,9 @@
 {
   "bin": {
-    "ts-node-starter": "dist/cli.js"
+    "fixtures-from-typedefs": "dist/cli.js"
   },
   "bugs": {
-    "url": "https://github.com/bennycode/ts-node-starter/issues"
+    "url": "https://github.com/tuzmusic/fixtures-from-typedefs/issues"
   },
   "description": "",
   "devDependencies": {
@@ -27,15 +27,15 @@
     "dist",
     "!dist/**/*.test.*"
   ],
-  "homepage": "https://www.npmjs.com/package/ts-node-starter",
+  "homepage": "https://www.npmjs.com/package/fixtures-from-typedefs",
   "keywords": [],
   "license": "UNLICENSED",
   "main": "dist/index.js",
-  "name": "@bennycode/ts-node-starter",
+  "name": "@tuzmusic/fixtures-from-typedefs",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bennycode/ts-node-starter.git"
+    "url": "git+https://github.com/tuzmusic/fixtures-from-typedefs.git"
   },
   "scripts": {
     "build": "tsc",
