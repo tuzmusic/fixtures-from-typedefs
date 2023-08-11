@@ -62,5 +62,8 @@
     "test:unit:coverage": "npm run test:unit -- --coverage"
   },
   "type": "module",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "dependencies": {
+    "@phenomnomnominal/tsquery": "^6.1.2"
+  }
 }
