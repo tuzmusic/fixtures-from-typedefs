@@ -1,6 +1,6 @@
-import {describe, expect, it, test} from 'vitest';
-import {defaultValues, parseFile} from './start.js';
-import type {components} from '../fixtures/index.js';
+import { describe, expect, it, test } from 'vitest';
+import { defaultValues, parseFile } from './start.js';
+import type { components } from '../fixtures/index.js';
 
 describe('Parsing', () => {
   const fixture = parseFile('../fixtures/index.d.ts') as components['schemas'];
