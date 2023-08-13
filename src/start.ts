@@ -41,7 +41,34 @@ function parseProperty(property, fixture: Record<string, number | boolean | stri
   console.error(errStr);
 }
 
-export function parse(filePath: string) {
+const complex = [] as string[];
+const problems = [] as string[];
+
+function parseType(type) {
+  const typeName: string = type.name.escapedText;
+
+  // enumerations are only to help with building other types, not for fixtures
+  if (typeName.endsWith('Enumeration')) {
+    return;
+  }
+
+  const fixture: Record<string, SupportedPrimitive> = {};
+
+  const properties = type.type.members;
+  if (!properties) {
+    if (type.type.types) {
+      complex.push(typeName);
+      return {[typeName]: `${typeName} appears to be a more complex type`};
+    }
+    problems.push(typeName);
+    return {[typeName]: `Hm, no properties for ${typeName}`};
+  }
+  properties.forEach(property => parseProperty(property, fixture));
+
+  return {[typeName]: fixture};
+}
+
+export function parseFile(filePath: string) {
   const text = fs.readFileSync(path.resolve(__dirname, filePath), 'utf8');
   const ast = tsQuery.ast(text);
   const [schemaTree] = tsQuery.query(ast, 'PropertySignature:has(Identifier[name="schemas"]) > TypeLiteral');
@@ -49,40 +76,18 @@ export function parse(filePath: string) {
     throw "Couldn't find node called 'schemas'";
   }
 
-  const allFixtures: Record<string, any> = {};
-  const complex = [] as string[];
-  const problems = [] as string[];
-
   // @ts-ignore (there is definitely a property called members.
   // Debugger gets the type right but TS gets it wrong???
-  schemaTree.members.forEach(type => {
-    const typeName: string = type.name.escapedText;
-
-    // enumerations are only to help with building other types, not for fixtures
-    if (typeName.endsWith('Enumeration')) {
-      return;
-    }
-
-    const fixture: Record<string, SupportedPrimitive> = {};
-
-    const properties = type.type.members;
-    if (!properties) {
-      if (type.type.types) {
-        console.log(`${typeName} appears to be a more complex type`);
-        complex.push(typeName);
-      } else {
-        console.log(`Hm, no properties for ${typeName}`);
-        problems.push(typeName);
-      }
-      return;
-    }
-    properties.forEach(property => parseProperty(property, fixture));
-
-    allFixtures[typeName] = fixture;
-  });
+  const allFixtures: Record<string, any> = schemaTree.members.reduce(
+    (obj, type) => ({
+      ...obj,
+      ...parseType(type),
+    }),
+    {}
+  );
 
   console.log(allFixtures);
   return allFixtures;
 }
 
-parse('../fixtures/index.d.ts');
+parseFile('../fixtures/index.d.ts');

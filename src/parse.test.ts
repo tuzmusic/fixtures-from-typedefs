@@ -1,9 +1,9 @@
-import { describe, expect, it, test } from 'vitest';
-import { defaultValues, parse } from './start.js';
-import type { components } from '../fixtures/index.js';
+import {describe, expect, it, test} from 'vitest';
+import {defaultValues, parseFile} from './start.js';
+import type {components} from '../fixtures/index.js';
 
 describe('Parsing', () => {
-  const fixture = parse('../fixtures/index.d.ts') as components['schemas'];
+  const fixture = parseFile('../fixtures/index.d.ts') as components['schemas'];
   describe('basic types', () => {
     it('Handles simple strings', () => {
       expect(fixture.BillingInformation.addressLineOne).toEqual(defaultValues.string);
@@ -43,7 +43,11 @@ describe('Parsing', () => {
     it.todo('handles null/undefined');
   });
 
-  describe.todo('single-level nested types (reference types)', () => {});
+  describe.todo('single-level nested types (reference types)', () => {
+    test.todo('simple reference type');
+    test.todo('nested reference type');
+    test.todo('array reference type');
+  });
 
   describe.todo('using examples', () => {});
 
