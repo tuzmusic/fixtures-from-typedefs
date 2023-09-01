@@ -328,10 +328,10 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.4.tgz#0b92dcc0cc1c81f6f306a381f28e31b1a56536e9"
   integrity sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==
 
-"@tstv/eslint-config@^3.0.0":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@tstv/eslint-config/-/eslint-config-3.1.1.tgz#e76fd13954bf29d31aa674b96bf6b97a1ec409e0"
-  integrity sha512-pvOsbmGWP9UCKKqEQEC+eajzzturGgOaVrfZWlxcx6NL9RxZKMUq/lbxegBP+2LhzyTZkL89oXTIrOdvA8cu9A==
+"@tstv/eslint-config@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@tstv/eslint-config/-/eslint-config-3.1.3.tgz#6661fba60f09677090270c33159cd748044d9df4"
+  integrity sha512-8pAQ+dm4d15Pm7tjxCvYlbA1cM9sEMUPogI0dU7hfkmqUZHRUkNhpsIya9nGtAJm29A2iK/l11/Flnwa5N9Utg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "6.2.1"
     "@typescript-eslint/parser" "6.2.1"
