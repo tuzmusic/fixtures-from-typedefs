@@ -340,10 +340,10 @@
     eslint-plugin-prettier "5.0.0"
     eslint-plugin-sort-keys-fix "1.1.2"
 
-"@tstv/tsconfig-common@^3.0.0":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@tstv/tsconfig-common/-/tsconfig-common-3.1.1.tgz#12d30129e9639311354d6dfefdd7f561ef49c17a"
-  integrity sha512-VIyrC0SnFxtv/t7OZ7Y7B6lUyGUaoh76u/jOQjRht0S1greovE9qxfRx7TJsRI7N7dyOkkRPzEXsPX1Yq4kWsg==
+"@tstv/tsconfig-common@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@tstv/tsconfig-common/-/tsconfig-common-3.2.1.tgz#591de5107f9624feeadcd23a06ff15a22a017728"
+  integrity sha512-5Ol2VxjRdAhjJm9YnGpIRKsr+4aAhL4wrsAMx8asblTzMd6sZTxREFPmwWOhDxOEbFixXqaGZk67SKnNCLKiFA==
 
 "@types/chai-subset@^1.3.3":
   version "1.3.3"
