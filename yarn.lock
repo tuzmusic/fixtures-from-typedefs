@@ -169,10 +169,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.46.0.tgz#3f7802972e8b6fe3f88ed1aabc74ec596c456db6"
   integrity sha512-a8TLtmPi8xzPkCbp/OGFUo5yhRkHM2Ko9kOWP4znJr0WAhWyThaw3PnwX4vOTWOAMsV2uRt32PPDcEz63esSaA==
 
-"@evilmartians/lefthook@^1.4.8":
-  version "1.4.8"
-  resolved "https://registry.yarnpkg.com/@evilmartians/lefthook/-/lefthook-1.4.8.tgz#d83a0f47a23ebbb21124e95ecac3836ae2d3a7de"
-  integrity sha512-skUfQjv+1ySL+reMdBb6aqnY+i6Dj4idp5zb6vnLye9RirqoE2ocAqOnW4qQ5I7NTzUT39xuirY9+OSS2Gh+sA==
+"@evilmartians/lefthook@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@evilmartians/lefthook/-/lefthook-1.5.0.tgz#d0a7fdf77aed0366809eb2a05d377b28852dab3e"
+  integrity sha512-lyHwJk0P2MULulbjQngUyay+uNxIKS/5UOMbhgj8uesi4Q2gMOlhixDZ16rXOiZWFd6IZtBAEpInF0H27sAt+g==
 
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
