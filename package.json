@@ -9,7 +9,7 @@
   "devDependencies": {
     "@evilmartians/lefthook": "^1.5.5",
     "@tstv/eslint-config": "^3.1.6",
-    "@tstv/tsconfig-common": "^3.4.0",
+    "@tstv/tsconfig-common": "^3.4.1",
     "@types/node": "^18.19.0",
     "@vitest/coverage-v8": "^0.34.6",
     "eslint": "^8.54.0",
