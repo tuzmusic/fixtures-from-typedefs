@@ -12,7 +12,7 @@
     "@tstv/tsconfig-common": "^3.4.1",
     "@types/node": "^18.19.21",
     "@vitest/coverage-v8": "^0.34.6",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "generate-changelog": "^1.8.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
