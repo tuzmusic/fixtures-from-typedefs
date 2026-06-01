@@ -461,10 +461,10 @@
     eslint-plugin-sort-keys-fix "^1.1.2"
     globals "^17.4.0"
 
-"@tstv/tsconfig-common@^3.7.1":
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@tstv/tsconfig-common/-/tsconfig-common-3.7.1.tgz#453595cbb05179fcbef4f23db9a5e0d6c7942be2"
-  integrity sha512-lSZqtDTNVBsm5yei37nX5hwMyCTrQ3IreghJvU9hfF4VK2mFiR6SPfbOPeh8w15AVeKD8ww7u9FmG1L1M1aYqA==
+"@tstv/tsconfig-common@^3.7.3":
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/@tstv/tsconfig-common/-/tsconfig-common-3.7.3.tgz#bb58cde1ec7cd25f1b279ef5a4471801e0374296"
+  integrity sha512-LDUMvK7txdyTiZ1fVmbzvawwWInb5n0RIzzXfi1Lnvg4Ho5cM/vDCFUkgPbhycnI01BC7wr8HZz76LQscXf/Gw==
 
 "@types/esquery@^1.5.4":
   version "1.5.4"
